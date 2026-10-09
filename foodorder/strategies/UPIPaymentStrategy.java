@@ -10,7 +10,7 @@ public class UPIPaymentStrategy implements PaymentStrategy {
     }
 
     public void pay(int total) {
-        System.out.println("Paid ₹" + amount + " using UPI (" + mobile + ")");
+        System.out.println("Paid ₹" + total + " using UPI (" + mobile + ")");
     }
 
 }

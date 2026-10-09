@@ -1,5 +1,7 @@
 import java.util.List;
 
+import strategies.PaymentStrategy;
+
 public abstract class Order {
 
     protected int orderId;
@@ -9,7 +11,7 @@ public abstract class Order {
     protected PaymentStrategy paymentStrategy;
     protected double total;
     protected String scheduled;
-
+    static int nextOrderId = 0;
     public Order() {
         this.user = null;
         this.restaurant = null;

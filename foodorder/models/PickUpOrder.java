@@ -1,11 +1,9 @@
-/**
- * PickUpOrder
- */
+
 public class PickUpOrder extends Order {
 
     private String restaurantAddress;
 
-    public PickupOrder() {
+    public PickUpOrder() {
         restaurantAddress = "";
     }
 

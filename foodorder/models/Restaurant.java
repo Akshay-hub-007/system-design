@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Restaurant {
     private static int nextRestaurantId = 0;
     private int restaurantId;
