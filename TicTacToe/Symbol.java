@@ -11,5 +11,9 @@ public class Symbol {
         return this.symbol;
     }
 
+    public String toString() {
+        return  this.symbol + " ";
+    }
+
 
 }

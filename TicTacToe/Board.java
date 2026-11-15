@@ -2,13 +2,11 @@ package TicTacToe;
 import java.util.*;
 public class Board {
     
-    private List<Player> players;
     private int size;
     private List<List<Symbol>> board;
     private Symbol emptyCell;
 
     public  Board(int size) {
-        players = new ArrayList<>();
         this.size = size;
         this.board = new ArrayList<>();
 
@@ -37,7 +35,19 @@ public class Board {
         return true;
     }
 
-    public void displayBoard() {
+    public Symbol getCell(int r,int c) {
+        return board.get(r).get(c);
+    }
+
+    public Symbol getEmptyCell() {
+        return emptyCell;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void display() {
 
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {

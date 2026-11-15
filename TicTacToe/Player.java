@@ -7,9 +7,10 @@ public class Player {
     private int playerId;
     private int score;
 
-    public Player(Symbol symbol,String name) {
+    public Player(int id,Symbol symbol,String name) {
         this.symbol = symbol;
         this.name = name;
+        this.playerId = id;
     }
 
     public String getName() {
