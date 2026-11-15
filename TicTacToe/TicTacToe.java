@@ -47,7 +47,6 @@ public class TicTacToe {
         while (!gameOver) {
             board.display();
 
-            // Take out the current player from dequeue
             Player currentPlayer = players.peekFirst();
             System.out.print(currentPlayer.getName() + " (" + currentPlayer.getSymbol().getSymbol() 
                     + ") - Enter row and column: ");
@@ -55,7 +54,6 @@ public class TicTacToe {
             int row = scanner.nextInt();
             int col = scanner.nextInt();
 
-            // check if move is valid
             if (rule.isValidMove(board, row, col)) {
                 board.markCell(row, col, currentPlayer.getSymbol());
                 notify(currentPlayer.getName() + " played (" + row + "," + col + ")");
@@ -76,7 +74,6 @@ public class TicTacToe {
 
                     gameOver = true;
                 } else {
-                    // Move player to back of queue
                     players.removeFirst();
                     players.addLast(currentPlayer);
                 }
